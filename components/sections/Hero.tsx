@@ -58,20 +58,7 @@ export function Hero() {
         }}
       />
 
-      <div className="container-x relative z-10 flex flex-col flex-1 text-[var(--paper)] pt-[clamp(6rem,4rem+10vw,11rem)]">
-        {/* Eyebrow row — small, premium */}
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-5">
-          <span className="flex items-center gap-2 font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/75">
-            <span className="inline-block h-1 w-6 bg-[var(--rust)]" />
-            Roofing, Dallas — Fort Worth
-          </span>
-          <span className="hidden sm:flex items-center gap-2 font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/75">
-            Est. {site.founded}
-            <span aria-hidden className="h-1 w-1 rounded-full bg-white/30" />
-            License {site.license}
-          </span>
-        </div>
-
+      <div className="container-x relative z-10 flex flex-col flex-1 justify-end text-[var(--paper)] pb-[clamp(2rem,1.5rem+4vw,4rem)]">
         {/* Editorial — text-led, full-bleed photo behind */}
         <div className="mt-12 w-full">
           <h1 className="h-display !text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)]">
@@ -98,6 +85,18 @@ export function Hero() {
           </div>
         </div>
 
+        {/* Eyebrow row — small, premium */}
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-5">
+          <span className="flex items-center gap-2 font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/75">
+            <span className="inline-block h-1 w-6 bg-[var(--rust)]" />
+            Roofing, Dallas — Fort Worth
+          </span>
+          <span className="hidden sm:flex items-center gap-2 font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/75">
+            Est. {site.founded}
+            <span aria-hidden className="h-1 w-1 rounded-full bg-white/30" />
+            License {site.license}
+          </span>
+        </div>
 
       </div>
     </section>
