@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone } from "@phosphor-icons/react/dist/ssr";
 import { nav, site } from "@/lib/config";
@@ -10,14 +10,6 @@ import { Button } from "@/components/ui/Button";
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -30,7 +22,7 @@ export function Header() {
     <>
       <header className="fixed inset-x-0 top-0 z-50 pointer-events-none">
         <div className="container-x pt-3 sm:pt-5">
-          <div className="nav-pill" data-scrolled={scrolled ? "true" : "false"}>
+          <div className="nav-pill" data-scrolled="true">
             <Link href="/" className="font-display text-[19px] font-bold leading-none tracking-[-0.02em] text-[var(--ink)]">
               Apex<span className="text-[var(--rust)]">.</span>
             </Link>
