@@ -83,7 +83,7 @@ export default function ServicesHub() {
                           {s.timeline.split(",")[0]}
                         </p>
                       </div>
-                      <span className="inline-flex h-10 w-10 sm:h-11 sm:w-11 sm:col-span-1 sm:justify-self-end items-center justify-center rounded-full bg-[var(--paper-3)] text-[var(--ink-2)] transition-all duration-500 group-hover:bg-[var(--ink)] group-hover:text-[var(--paper)] group-hover:translate-x-1 group-hover:-translate-y-1">
+                      <span className="inline-flex h-10 w-10 shrink-0 sm:h-11 sm:w-11 sm:col-span-1 sm:justify-self-end items-center justify-center rounded-full bg-[var(--paper-3)] text-[var(--ink-2)] transition-all duration-500 group-hover:bg-[var(--ink)] group-hover:text-[var(--paper)] group-hover:translate-x-1 group-hover:-translate-y-1">
                         <ArrowUpRight size={14} weight="bold" />
                       </span>
                     </div>

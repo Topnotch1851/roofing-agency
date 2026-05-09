@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/Button";
 export function Reviews() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(3);
+  const [containerWidth, setContainerWidth] = useState(0);
 
   useEffect(() => {
     const updateCardsPerView = () => {
@@ -23,6 +24,18 @@ export function Reviews() {
     return () => window.removeEventListener("resize", updateCardsPerView);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      const container = document.querySelector('[data-carousel-container]');
+      if (container) {
+        setContainerWidth(container.clientWidth);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const nextSlide = () => {
     const maxIndex = Math.max(0, reviews.length - cardsPerView);
     setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
@@ -32,6 +45,10 @@ export function Reviews() {
     const maxIndex = Math.max(0, reviews.length - cardsPerView);
     setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
   };
+
+  const gap = 16;
+  const cardWidth = containerWidth > 0 ? (containerWidth - gap * (cardsPerView - 1)) / cardsPerView : 0;
+  const slideOffset = currentIndex * (cardWidth + gap);
 
   return (
     <section id="reviews" className="section-y">
@@ -73,16 +90,16 @@ export function Reviews() {
         </div>
 
         <div className="mt-10 sm:mt-14">
-          <div className="overflow-hidden">
+          <div className="overflow-hidden" data-carousel-container>
             <div
               className="flex gap-4 transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)` }}
+              style={{ transform: `translateX(-${slideOffset}px)` }}
             >
               {reviews.map((r) => (
                 <div
                   key={r.name}
                   className="flex-shrink-0"
-                  style={{ width: `calc((100% - ${(cardsPerView - 1) * 16}px) / ${cardsPerView})` }}
+                  style={{ width: `${cardWidth}px` }}
                 >
                   <article className="h-full rounded-[24px] border border-[var(--line)] bg-[var(--paper)] p-6">
                     <div className="flex items-center justify-between">

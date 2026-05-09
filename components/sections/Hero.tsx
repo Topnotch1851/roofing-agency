@@ -6,7 +6,7 @@ import { telHref } from "@/lib/utils";
 
 export function Hero() {
   return (
-    <section className="relative isolate hero-pad-top pb-16 md:pb-24 overflow-hidden bg-[var(--ink)]">
+    <section className="relative isolate h-screen flex flex-col overflow-hidden bg-[var(--ink)]">
       {/* Background photo — Next/Image auto-serves AVIF/WebP at viewport size */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -58,7 +58,7 @@ export function Hero() {
         }}
       />
 
-      <div className="container-x relative z-10 text-[var(--paper)]">
+      <div className="container-x relative z-10 flex flex-col flex-1 text-[var(--paper)] pt-[clamp(6rem,4rem+10vw,11rem)]">
         {/* Eyebrow row — small, premium */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-5">
           <span className="flex items-center gap-2 font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/75">

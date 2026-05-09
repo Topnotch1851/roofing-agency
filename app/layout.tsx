@@ -67,7 +67,7 @@ export default function RootLayout({
       <body className="antialiased grain min-h-[100dvh] flex flex-col">
         <LocalBusinessSchema />
         <Header />
-        <main className="flex-1 pb-24 md:pb-0">{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
         <MobileStickyBar />
       </body>

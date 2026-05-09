@@ -132,15 +132,6 @@ export function Header() {
                   </motion.div>
                 ))}
               </motion.nav>
-
-              <div className="mt-auto flex flex-col gap-3">
-                <Button href={nav.cta.href} variant="amber" size="lg">
-                  {nav.cta.label}
-                </Button>
-                <Button href={telHref(site.phone)} variant="outline" size="lg" icon="phone">
-                  Call {site.phone}
-                </Button>
-              </div>
             </div>
           </motion.div>
         )}
