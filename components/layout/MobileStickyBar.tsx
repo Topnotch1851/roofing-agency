@@ -1,9 +1,25 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Phone } from "@phosphor-icons/react/dist/ssr";
 import { site } from "@/lib/config";
 import { telHref } from "@/lib/utils";
 
 export function MobileStickyBar() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  if (!isVisible) return null;
+
   return (
     <div
       role="region"

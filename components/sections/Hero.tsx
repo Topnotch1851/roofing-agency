@@ -6,7 +6,7 @@ import { telHref } from "@/lib/utils";
 
 export function Hero() {
   return (
-    <section className="relative isolate h-screen flex flex-col overflow-hidden bg-[var(--ink)]">
+    <section className="relative isolate h-[97vh] flex flex-col overflow-hidden bg-[var(--ink)]">
       {/* Background photo — Next/Image auto-serves AVIF/WebP at viewport size */}
       <div className="absolute inset-0 z-0">
         <Image
