@@ -22,7 +22,7 @@ export function Header() {
     <>
       <header className="fixed inset-x-0 top-0 z-50 pointer-events-none">
         <div className="container-x pt-3 sm:pt-5">
-          <div className="nav-pill" data-scrolled="true">
+          <div className="nav-pill">
             <Link href="/" className="font-display text-[19px] font-bold leading-none tracking-[-0.02em] text-[var(--ink)]">
               Apex<span className="text-[var(--rust)]">.</span>
             </Link>
