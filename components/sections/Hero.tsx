@@ -58,7 +58,7 @@ export function Hero() {
         }}
       />
 
-      <div className="container-x relative z-10 flex flex-col flex-1 justify-end text-[var(--paper)] pb-[clamp(2rem,1.5rem+4vw,4rem)]">
+      <div className="container-x relative z-10 flex flex-col flex-1 justify-end text-[var(--paper)] pb-16">
         {/* Editorial — text-led, full-bleed photo behind */}
         <div className="mt-12 w-full">
           <h1 className="h-display !text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)]">
