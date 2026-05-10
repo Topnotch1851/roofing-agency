@@ -384,8 +384,7 @@ textarea.input { height: auto; padding: 14px 18px; resize: vertical; min-height:
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  padding-block: 6px;
-  padding-inline: 6px 12px;
+  padding: 10px 6px 10px 12px;
   border-radius: 9999px;
   border: 1px solid color-mix(in oklch, var(--ink) 8%, transparent);
   background: var(--paper);
@@ -397,7 +396,7 @@ textarea.input { height: auto; padding: 14px 18px; resize: vertical; min-height:
   pointer-events: auto;
 }
 @media (min-width: 640px) {
-  .nav-pill { padding-inline: 8px 20px; gap: 0.75rem; }
+  .nav-pill { padding: 10px 8px 10px 20px; gap: 0.75rem; }
 }
 
 /* Double-bezel utility (used inline in components most of the time) */
