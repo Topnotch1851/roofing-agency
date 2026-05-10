@@ -10,9 +10,9 @@ const base =
   "group relative inline-flex items-center justify-center gap-2 font-medium tracking-tight transition-all duration-500 active:scale-[0.985] disabled:opacity-50 disabled:pointer-events-none whitespace-nowrap";
 
 const sizes: Record<Size, string> = {
-  sm: "h-10 pl-4 pr-1.5 text-[13px] rounded-full",
-  md: "h-12 pl-5 pr-1.5 text-[14px] rounded-full",
-  lg: "h-14 pl-6 pr-2 text-[15px] rounded-full",
+  sm: "h-10 pl-3 pr-1.5 text-[13px] rounded-full",
+  md: "h-12 pl-4 pr-1.5 text-[14px] rounded-full",
+  lg: "h-14 pl-5 pr-2 text-[15px] rounded-full",
 };
 
 const variants: Record<Variant, string> = {

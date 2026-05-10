@@ -26,8 +26,8 @@ export default function ContactPage() {
 
       <section className="hero-pad-top pb-16 md:pb-24">
         <div className="container-x">
-          <div className="grid gap-10 sm:gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-6">
+          <div className="grid gap-10 sm:gap-12 grid-cols-1 lg:grid-cols-12 items-start">
+            <div className="lg:col-span-6 w-full">
               <Reveal>
                 <Eyebrow>Contact</Eyebrow>
                 <h1 className="h-display mt-5">
@@ -39,7 +39,7 @@ export default function ContactPage() {
                 </p>
               </Reveal>
 
-              <div className="mt-10 grid gap-3">
+              <div className="mt-10 flex flex-col gap-3 text-left w-full">
                 {[
                   {
                     label: "Call",
@@ -75,7 +75,7 @@ export default function ContactPage() {
                   <a
                     key={c.label}
                     href={c.href}
-                    className="group flex items-center gap-4 rounded-[20px] border border-[var(--line)] bg-[var(--paper)] p-4 sm:p-5 transition-all duration-500 hover:border-[var(--ink-2)] hover:-translate-y-0.5"
+                    className="group flex items-center gap-4 rounded-[20px] border border-[var(--line)] bg-[var(--paper)] p-4 sm:p-5 transition-all duration-500 hover:border-[var(--ink-2)] hover:-translate-y-0.5 w-full"
                   >
                     <span className="flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--ink)] text-[var(--rust)]">
                       <c.icon size={18} weight="fill" />
@@ -96,7 +96,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 lg:col-start-8">
+            <div className="lg:col-span-5 lg:col-start-8 w-full">
               <Reveal delay={0.1}>
                 <div className="sticky top-32">
                   <Eyebrow>Free inspection</Eyebrow>
