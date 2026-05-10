@@ -65,8 +65,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} ${sora.variable}`}>
       <head>
-        <link rel="preconnect" href="https://a.basemaps.cartocdn.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://b.basemaps.cartocdn.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://a.basemaps.cartocdn.com" />
+        <link rel="dns-prefetch" href="https://b.basemaps.cartocdn.com" />
         <link rel="dns-prefetch" href="https://c.basemaps.cartocdn.com" />
         <link rel="dns-prefetch" href="https://d.basemaps.cartocdn.com" />
       </head>

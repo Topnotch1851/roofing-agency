@@ -15,7 +15,7 @@ export function Hero() {
           fill
           priority
           fetchPriority="high"
-          quality={72}
+          quality={60}
           sizes="100vw"
           className="object-cover object-[60%_45%] scale-[1.02]"
         />
