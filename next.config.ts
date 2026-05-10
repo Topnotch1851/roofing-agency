@@ -4,8 +4,7 @@ const nextConfig: NextConfig = {
   // Allow Windsurf browser preview proxy + LAN hosts in dev
   allowedDevOrigins: ["127.0.0.1", "localhost", "10.131.142.109"],
   images: {
-    // Serve picsum unoptimized in dev/demo to avoid upstream timeouts
-    unoptimized: true,
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "picsum.photos" },

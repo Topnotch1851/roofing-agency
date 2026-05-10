@@ -27,11 +27,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.85,
     })),
-    {
-      url: `${base}/blog/filing-hail-claim-texas`,
+    ...[
+      "filing-hail-claim-texas",
+      "asphalt-vs-metal-dallas",
+      "spotting-hail-damage",
+      "gutters-foundation-dallas",
+    ].map((slug) => ({
+      url: `${base}/blog/${slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.7,
-    },
+    })),
   ];
 }

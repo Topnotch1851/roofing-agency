@@ -6,7 +6,7 @@ import { telHref } from "@/lib/utils";
 
 export function Hero() {
   return (
-    <section className="relative isolate h-[97vh] flex flex-col overflow-hidden bg-[var(--ink)]">
+    <section className="relative isolate h-screen flex flex-col overflow-hidden bg-[var(--ink)]">
       {/* Background photo — Next/Image auto-serves AVIF/WebP at viewport size */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -61,7 +61,7 @@ export function Hero() {
       <div className="container-x relative z-10 flex flex-col flex-1 justify-end text-[var(--paper)] pb-16">
         {/* Editorial — text-led, full-bleed photo behind */}
         <div className="mt-12 w-full">
-          <h1 className="h-display !text-white !font-normal drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)] leading-[1.2]">
+          <h1 className="h-display !text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)]">
             The roof
             <br />
             <span className="text-white">your neighbours</span>

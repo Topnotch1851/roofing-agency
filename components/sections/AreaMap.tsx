@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { areas } from "@/lib/content";
 import { Reveal } from "@/components/ui/Reveal";
@@ -14,11 +15,33 @@ const MapBackground = dynamic(() => import("@/components/map/MapBackground"), {
 });
 
 export function AreaMap() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [shouldLoadMap, setShouldLoadMap] = useState(false);
+
+  useEffect(() => {
+    if (!sectionRef.current || shouldLoadMap) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setShouldLoadMap(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+    observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, [shouldLoadMap]);
+
   return (
-    <section className="relative overflow-hidden border-y border-[var(--line)]">
+    <section ref={sectionRef} className="relative overflow-hidden border-y border-[var(--line)]">
       {/* Map fills entire section */}
       <div className="absolute inset-0 -z-0 map-warm-filter">
-        <MapBackground />
+        {shouldLoadMap ? (
+          <MapBackground />
+        ) : (
+          <div className="absolute inset-0 bg-[var(--paper-2)]" aria-hidden />
+        )}
       </div>
 
       {/* Warm cream wash over the map so palette stays consistent */}
