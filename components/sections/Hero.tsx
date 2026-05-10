@@ -27,7 +27,7 @@ export function Hero() {
         className="absolute inset-0 z-[1]"
         style={{
           background:
-            "linear-gradient(92deg, color-mix(in oklch, var(--ink) 75%, transparent) 0%, color-mix(in oklch, var(--ink) 65%, transparent) 35%, color-mix(in oklch, var(--ink) 45%, transparent) 55%, transparent 70%)",
+            "linear-gradient(92deg, color-mix(in oklch, var(--ink) 40%, transparent) 0%, color-mix(in oklch, var(--ink) 30%, transparent) 35%, color-mix(in oklch, var(--ink) 20%, transparent) 55%, transparent 70%)",
         }}
       />
       {/* Top + bottom feathering — keeps nav and section seam clean */}
@@ -36,7 +36,7 @@ export function Hero() {
         className="absolute inset-0 z-[1]"
         style={{
           background:
-            "linear-gradient(180deg, color-mix(in oklch, var(--ink) 70%, transparent) 0%, color-mix(in oklch, var(--ink) 25%, transparent) 14%, transparent 28%, transparent 68%, color-mix(in oklch, var(--ink) 75%, transparent) 100%)",
+            "linear-gradient(180deg, color-mix(in oklch, var(--ink) 35%, transparent) 0%, color-mix(in oklch, var(--ink) 15%, transparent) 14%, transparent 28%, transparent 68%, color-mix(in oklch, var(--ink) 40%, transparent) 100%)",
         }}
       />
       {/* Warm rust accent — subtle, sunset side */}
@@ -45,7 +45,7 @@ export function Hero() {
         className="absolute inset-0 z-[1]"
         style={{
           background:
-            "radial-gradient(38% 55% at 88% 30%, color-mix(in oklch, var(--rust) 22%, transparent) 0%, transparent 70%)",
+            "radial-gradient(38% 55% at 88% 30%, color-mix(in oklch, var(--rust) 12%, transparent) 0%, transparent 70%)",
         }}
       />
       {/* Fine grain — kills banding without hurting perf */}
@@ -61,10 +61,10 @@ export function Hero() {
       <div className="container-x relative z-10 flex flex-col flex-1 justify-end text-[var(--paper)] pb-16">
         {/* Editorial — text-led, full-bleed photo behind */}
         <div className="mt-12 w-full">
-          <h1 className="h-display !text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)]">
+          <h1 className="h-display !text-white !font-normal drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)] leading-[1.2]">
             The roof
             <br />
-            <span className="italic font-[500] text-white">your neighbours</span>
+            <span className="text-white">your neighbours</span>
             <br />
             keep recommending<span className="text-[var(--rust)]">.</span>
           </h1>
